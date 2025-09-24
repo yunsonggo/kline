@@ -2,7 +2,10 @@ module github.com/yunsonggo/kline/api/solana_api
 
 go 1.24.7
 
-require github.com/zeromicro/go-zero v1.9.0
+require (
+	github.com/yunsonggo/kline/pkg v0.0.0-20250924045716-9a979c3b9724
+	github.com/zeromicro/go-zero v1.9.0
+)
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
