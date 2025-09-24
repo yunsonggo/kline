@@ -1,0 +1,15 @@
+syntax="proto3";
+
+package solanapb;
+option go_package="./proto/solanapb";
+
+service SolanaApp {
+  rpc Ping(PingReq) returns (PingResp);
+}
+
+message PingReq {
+  string name = 1;
+}
+message PingResp {
+  string data = 2;
+}

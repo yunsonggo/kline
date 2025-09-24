@@ -1,0 +1,28 @@
+syntax = "v1"
+
+type (
+	Status {
+		Code  int32  `json:"code"`
+		Msg   string `json:"msg"`
+		Error string `json:"error"`
+	}
+	PingReq {
+		Name string `json:"name"`
+	}
+	PingResp {
+		Status Status `json:"status"`
+		Data   string `json:"data"`
+	}
+)
+
+@server (
+	group:      api
+	prefix:     /v1
+	middleware: CostInterceptor
+	timeout:    5s
+)
+service SolanaApi {
+	@handler ping
+	get /ping (PingReq) returns (PingResp)
+}
+

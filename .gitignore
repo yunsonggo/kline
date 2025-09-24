@@ -1,6 +1,26 @@
 # If you prefer the allow list template instead of the deny list, see community template:
 # https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
 #
+# 忽略所有 test 目录
+**/test/
+
+# 忽略所有 bin 目录
+**/bin/
+
+# 忽略所有 log 目录
+**/log/
+**/logs/
+
+# 编辑器和 IDE 配置文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+
+# Go mod cache
+vendor/
+
 # Binaries for programs and plugins
 *.exe
 *.exe~

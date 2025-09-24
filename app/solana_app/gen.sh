@@ -1,0 +1,1 @@
+goctl rpc protoc proto/*.proto --proto_path=./proto --proto_path=../../pkg/protos --go_out=. --go-grpc_out=. --zrpc_out=. --style=goZero
